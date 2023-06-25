@@ -1,0 +1,13 @@
+1. Create an EC2 instance using Ubuntu AMI.
+2. Add security group by granting All Traffic from Anywhere.
+3. Generate ppk key from .pem file which is added as keypair value while creating EC2 instance using Putty Gen and save it.
+4. Now connect to EC2 instance using Putty by passing public IpV4 and in Data pass name and in Auth pass the private key file and open it.
+5. Open WinSCP and connect to it.
+6. Drag and drop the files required for the application.
+7. Open Ubuntu where we have connected using putty.
+8. Update it using this command :  sudo apt-get update
+9. Now install pip using this command :  sudo apt install python3-pip
+10. Install required libraries which are present in reqiurements.txt using this command :  pip3 install -r requirements.txt
+11. Run the python application using this command :  python3 app.py
+12. Go back to EC2 instance and copy the DNS of the instance and paste it in the web in such a way that add 8080 at the end of the DNS URL 
+    Eg. jsakdg3hy3:8080
